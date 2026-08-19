@@ -16,7 +16,28 @@ export const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose }) => {
 
   const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
 
-  const shareText = `🕊️ *Wedding Invitation* 🕊️\n\nTogether with our families, we cordially invite you to the wedding of\n*${weddingData.brideName} & ${weddingData.groomName}*\n\n📅 *Date:* Sunday, 13 September 2026 (${weddingData.traditionalDate})\n⏰ *Muhurtham:* ${weddingData.ceremony.muhurtham}\n📍 *Ceremony:* ${weddingData.ceremony.venueName}, ${weddingData.ceremony.subVenue}\n🎉 *Reception:* ${weddingData.reception.venueName}\n\n👉 Open the interactive digital invitation here:\n${currentUrl}`;
+  const shareText = `🌸 *Wedding Invitation* 🌸
+
+With the blessings of the Almighty, we joyfully announce the wedding of
+
+✨ *${weddingData.brideName} & ${weddingData.groomName}* ✨
+
+📅 *${weddingData.weddingDay}, ${weddingData.weddingDateFormatted}*
+    ${weddingData.traditionalDateMalayalam}
+
+🕌 *Ceremony*
+    ${weddingData.ceremony.muhurtham}
+    ${weddingData.ceremony.venueName}
+    ${weddingData.ceremony.subVenue}
+
+🎉 *Reception*
+    ${weddingData.reception.time}
+    ${weddingData.reception.venueName}
+
+We seek your presence and blessings on this auspicious occasion.
+
+👉 *View Digital Invitation:*
+https://weddings.codelessai.in`;
 
   const handleWhatsAppShare = () => {
     const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
