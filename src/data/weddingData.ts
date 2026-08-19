@@ -157,28 +157,28 @@ export const weddingData: WeddingData = {
   gallery: [
     {
       id: "1",
-      url: new URL('./assets/images/couple_hero_portrait_1787138053178.jpeg', import.meta.url).href,
+      url: "/images/couple_hero_portrait_1787138053178.jpeg",
       caption: "Sreekutty & Pranav • Together in golden harmony",
       aspect: "portrait",
       alt: "Sreekutty and Pranav wedding portrait in traditional Kerala Kasavu attire"
     },
     {
       id: "2",
-      url: new URL('./assets/images/couple_candid_smile_1787138065161.jpg', import.meta.url).href,
+      url: "/images/couple_candid_smile_1787138065161.jpg",
       caption: "Shared smiles and pure joy as the sacred day draws near",
       aspect: "landscape",
       alt: "Kerala wedding couple smiling together happily"
     },
     {
       id: "3",
-      url: new URL('./assets/images/couple_traditional_hands_1787138078852.jpg', import.meta.url).href,
+      url: "/images/couple_traditional_hands_1787138078852.jpg",
       caption: "Sacred bond of togetherness, adorned with fragrant jasmine",
       aspect: "portrait",
       alt: "Close up of couple holding hands with traditional wedding garland"
     },
     {
       id: "4",
-      url: new URL('./assets/images/temple_ceremony_ambiance_1787138090184.jpg', import.meta.url).href,
+      url: "/images/temple_ceremony_ambiance_1787138090184.jpg",
       caption: "Chengaloor Melchurath Temple • A sacred abode of divine blessings",
       aspect: "landscape",
       alt: "Traditional Kerala temple courtyard illuminated with Nilavilakku lamps"
