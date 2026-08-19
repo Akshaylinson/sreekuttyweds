@@ -157,7 +157,7 @@ export const weddingData: WeddingData = {
   gallery: [
     {
       id: "1",
-      url: "/images/couple_hero_portrait_1787138053178.jpeg",
+      url: "/images/couple_hero_portrait_1787138053178_1.jpeg",
       caption: "Sreekutty & Pranav • Together in golden harmony",
       aspect: "portrait",
       alt: "Sreekutty and Pranav wedding portrait in traditional Kerala Kasavu attire"
