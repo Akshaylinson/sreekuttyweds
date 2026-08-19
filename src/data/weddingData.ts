@@ -164,7 +164,7 @@ export const weddingData: WeddingData = {
     },
     {
       id: "2",
-      url: "/images/couple_candid_smile_1787138065161.jpg",
+      url: "/images/couple_candid_smile_1787138065161.jpeg",
       caption: "Shared smiles and pure joy as the sacred day draws near",
       aspect: "landscape",
       alt: "Kerala wedding couple smiling together happily"
