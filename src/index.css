@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    --font-heading: 'Cinzel', 'Playfair Display', Georgia, serif;
+    --font-script: 'Alex Brush', cursive;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-malayalam: 'Noto Serif Malayalam', 'Manjari', serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FAF7F2;
+    color: #2D231E;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.font-serif-title {
+  font-family: var(--font-heading);
+}
+
+.font-serif-body {
+  font-family: var(--font-serif);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-malayalam {
+  font-family: var(--font-malayalam);
+}
+
+/* Gold Gradient Accents & Foil Text */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #D4AF37 0%, #F5E08B 35%, #C59828 70%, #FBF0B9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-subtle {
+  background: linear-gradient(135deg, #C29B38 0%, #E6C875 50%, #B88924 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to right, #B38827, #F5D77F, #B38827) 1;
+}
+
+.gold-box-shadow {
+  box-shadow: 0 10px 30px -10px rgba(184, 137, 36, 0.25), 0 0 1px 1px rgba(212, 175, 55, 0.3);
+}
+
+.luxury-card-shadow {
+  box-shadow: 0 20px 40px -15px rgba(45, 30, 20, 0.08), 0 0 0 1px rgba(212, 175, 55, 0.18);
+}
+
+/* Shimmer Animation */
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-gold-shimmer {
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.8) 0%, rgba(255, 245, 204, 1) 50%, rgba(212, 175, 55, 0.8) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldShimmer 4s ease-in-out infinite;
+}
+
+/* Light sweep effect */
+@keyframes lightSweep {
+  0% {
+    transform: translateX(-100%) skewX(-25deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-25deg);
+  }
+}
+
+.light-sweep-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.light-sweep-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-100%) skewX(-25deg);
+  pointer-events: none;
+}
+
+.light-sweep-container:hover::after,
+.light-sweep-active::after {
+  animation: lightSweep 1.8s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+.animate-gentle-float {
+  animation: gentleFloat 6s ease-in-out infinite;
+}
+
+/* Soft paper texture */
+.paper-pattern {
+  background-color: #FAF7F2;
+  background-image: radial-gradient(#D4AF37 0.75px, transparent 0.75px), radial-gradient(#6B4E38 0.5px, #FAF7F2 0.5px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+  background-opacity: 0.03;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B38827;
+}
+
+/* Touch action for scratch card */
+.touch-none-select {
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}

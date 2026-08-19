@@ -1,0 +1,6 @@
+{
+  "name": "Sreekutty & Pranav — Wedding Invitation",
+  "description": "A luxury cinematic digital wedding invitation for Sreekutty and Pranav celebrating their wedding on 13 September 2026.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
